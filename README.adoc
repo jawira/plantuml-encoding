@@ -26,7 +26,11 @@ To achieve such an encoding, the text diagram is:
 
 [source, php]
 ----
-include::ressources/examples/example-2.php[]
+use function Jawira\PlantUml\encodep;
+
+$encode = encodep('Alice -> Bob: hello');
+
+echo "http://www.plantuml.com/plantuml/uml/{$encode}";
 ----
 
 == Credits
