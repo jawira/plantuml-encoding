@@ -1,0 +1,37 @@
+= PlantUML encoding functions 
+
+*PlantUML* uses a *special encoding* to transform a uml text description like:
+
+----
+Bob -> Alice : hello
+----
+
+into
+
+----
+SyfFKj2rKt3CoKnELR1Io4ZDoSa70000
+----
+
+The advantage of the last encoding is that it is easier to use in URL:
+
+http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000
+
+To achieve such an encoding, the text diagram is:
+
+* Encoded in UTF-8
+* Compressed using Deflate algorithm
+* Encoded back in plain ASCII using a transformation close to base64
+
+== Example
+
+[souce]
+----
+include::ressources/examples/example-2.php[]
+----
+
+== Credits
+
+These functions are a copy/paste from:
+
+* http://plantuml.com/pte
+* http://plantuml.com/code-php

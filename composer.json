@@ -1,0 +1,26 @@
+{
+  "name": "jawira/plantuml-encoding",
+  "description": "PlantUML encoding functions",
+  "type": "library",
+  "license": "GPLv3",
+  "authors": [
+    {
+      "name": "Jawira Portugal",
+      "email": "dev@jawira.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0"
+  },
+  "keywords": [
+    "PlantUML",
+    "functions",
+    "encoding",
+    "encodep"
+  ],
+  "autoload": {
+    "files": [
+      "src/plantuml_functions.php"
+    ]
+  }
+}
