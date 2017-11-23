@@ -24,7 +24,7 @@ To achieve such an encoding, the text diagram is:
 
 == Example
 
-[souce]
+[source, php]
 ----
 include::ressources/examples/example-2.php[]
 ----
