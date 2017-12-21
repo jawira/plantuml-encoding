@@ -1,12 +1,23 @@
 = PlantUML encoding functions 
 
-*PlantUML* uses a *special encoding* to transform a uml text description like:
+This repository exposes a PHP implementation of four *PlantUML encoding functions*:
+
+* `encodep`
+* `encode6bit`
+* `append3bytes`
+* `encode64`
+
+Usually only `encodep` is used.
+
+== Purpose
+
+link:http://plantuml.com/[PlantUML] uses a *special encoding* to transform an uml text description like:
 
 ----
 Bob -> Alice : hello
 ----
 
-into
+into this:
 
 ----
 SyfFKj2rKt3CoKnELR1Io4ZDoSa70000
@@ -24,14 +35,23 @@ To achieve such an encoding, the text diagram is:
 
 == Example
 
+You must import `encodep` function before using it.
+
 [source, php]
 ----
+<?php
+require 'vendor/autoload.php';
+
 use function Jawira\PlantUml\encodep;
 
 $encode = encodep('Alice -> Bob: hello');
-
 echo "http://www.plantuml.com/plantuml/uml/{$encode}";
 ----
+
+More examples:
+
+* link:ressources/examples/example-1.php[]
+* link:ressources/examples/example-2.php[]
 
 == Credits
 
