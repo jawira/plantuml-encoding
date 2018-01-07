@@ -29,7 +29,7 @@ http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000
 
 To achieve such an encoding, the text diagram is:
 
-* [line-through]#Underline text#
+* [line-through]#Encoded in UTF-8# (not anymore)
 * Compressed using Deflate algorithm
 * Encoded back in plain ASCII using a transformation close to base64
 
@@ -49,7 +49,7 @@ $encode = encodep('Alice -> Bob: hello');
 echo "http://www.plantuml.com/plantuml/uml/{$encode}";
 ----
 
-WARNING: Since v1.0.0, `encodep` function expects to receive utf8 text, therefore it doesn't encodes text to utf8 anymore.
+WARNING: Since v1.0.0, `encodep` function expects to receive utf8.
 
 More examples:
 
