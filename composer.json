@@ -2,7 +2,7 @@
   "name": "jawira/plantuml-encoding",
   "description": "PlantUML encoding functions",
   "type": "library",
-  "license": "GPLv3",
+  "license": "GPL-3.0-or-later",
   "authors": [
     {
       "name": "Jawira Portugal",
