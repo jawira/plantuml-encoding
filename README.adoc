@@ -2,12 +2,12 @@
 
 This repository exposes a PHP implementation of four *PlantUML encoding functions*:
 
-* `encodep`
-* `encode6bit`
-* `append3bytes`
-* `encode64`
+* `encodep()`
+* `encode6bit()`
+* `append3bytes()`
+* `encode64()`
 
-Usually only `encodep` is used.
+Usually only `encodep()` is used.
 
 == Purpose
 
@@ -34,9 +34,18 @@ To achieve such an encoding, the text diagram is:
 * Encoded back in plain ASCII using a transformation close to base64
 
 
-== Example
+== Install
 
-You must import `encodep` function before using it.
+Install using Composer:
+
+[source, bash]
+----
+$ composer require jawira/plantuml-encoding
+----
+
+== Usage
+
+You must import `encodep()` function before using it.
 
 [source, php]
 ----
@@ -58,7 +67,4 @@ More examples:
 
 == Credits
 
-These functions are a copy/paste from:
-
-* http://plantuml.com/pte
-* http://plantuml.com/code-php
+These functions are a copy/paste from http://plantuml.com/code-php
