@@ -19,7 +19,7 @@ v1.0.2 - 2018-02-20
 ### Fixed
 
 * Changed license in `composer.json` for a SPDX compliant license
-* Some dates in changelog where incorrect
+* Some dates in changelog were incorrect
 
 ### Removed 
 
