@@ -62,7 +62,7 @@ $encode = encodep('Alice -> Bob: hello');
 echo "http://www.plantuml.com/plantuml/uml/{$encode}";
 ----
 
-WARNING: Since v1.0.0, `encodep` function expects to receive utf8.
+WARNING: Since v1.0.0, `encodep()` function expects to receive utf8.
 
 More examples:
 
