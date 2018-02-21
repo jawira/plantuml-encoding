@@ -9,6 +9,10 @@ This repository exposes a PHP implementation of four *PlantUML encoding function
 
 Usually only `encodep()` is used.
 
+image:https://poser.pugx.org/jawira/plantuml-encoding/v/stable[title="Latest Stable Version", link="https://packagist.org/packages/jawira/plantuml-encoding"]
+image:https://poser.pugx.org/jawira/plantuml-encoding/license[title="License", link="https://packagist.org/packages/jawira/plantuml-encoding"]
+image:https://poser.pugx.org/jawira/plantuml-encoding/composerlock[title="composer.lock", link="https://packagist.org/packages/jawira/plantuml-encoding"]
+
 == Purpose
 
 link:http://plantuml.com/[PlantUML] uses a *special encoding* to transform an uml text description like:
