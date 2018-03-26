@@ -6,8 +6,12 @@ All notable changes to this project will be documented in this file.
 Unreleased
 ----------
 
+v1.0.4 - 2018-03-26
+-------------------
+
 ### Changes
 
+* Changes PHP requirement to include more versions.
 * An example script has been modified to show how to use full function's 
 namespace. This is required for versions < PHP 5.6.
 * Improving Readme file.

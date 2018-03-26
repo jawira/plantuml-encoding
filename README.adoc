@@ -57,8 +57,8 @@ $encode = encodep('Alice -> Bob: hello');
 echo "http://www.plantuml.com/plantuml/uml/{$encode}";
 ----
 
-TIP: Only PHP 5.6+ allows importing functons, for versions < PHP 5.6 you have to
-use full functin's namespace.
+TIP: Only PHP 5.6+ allows importing functions, for versions < PHP 5.6 you have to
+use full function's namespace.
 
 WARNING: Since v1.0.0, `encodep()` function expects to receive an UTF-8 string.
 
