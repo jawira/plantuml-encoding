@@ -3,11 +3,18 @@ Changelog
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-
 Unreleased
 ----------
+
+### Changes
+
+* An example script has been modified to show how to use full function's 
+namespace. This is required for versions < PHP 5.6.
+* Improving Readme file.
+
+### Fixed
+
+* Removing typo in `resources` dir.
 
 v1.0.3 - 2018-02-21
 -------------------

@@ -1,6 +1,7 @@
 = PlantUML encoding functions 
 
-This repository exposes a PHP implementation of four *PlantUML encoding functions*:
+[.lead]
+This library exposes the PHP implementation of four *PlantUML encoding functions*:
 
 * `encodep()`
 * `encode6bit()`
@@ -15,7 +16,8 @@ image:https://poser.pugx.org/jawira/plantuml-encoding/composerlock[title="compos
 
 == Purpose
 
-link:http://plantuml.com/[PlantUML] uses a *special encoding* to transform an uml text description like:
+link:http://plantuml.com/[PlantUML] uses a *special encoding* to transform an
+uml text description like this:
 
 ----
 Bob -> Alice : hello
@@ -30,13 +32,6 @@ SyfFKj2rKt3CoKnELR1Io4ZDoSa70000
 The advantage of the last encoding is that it is easier to use in URL:
 
 http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000
-
-To achieve such an encoding, the text diagram is:
-
-* [line-through]#Encoded in UTF-8# (not anymore)
-* Compressed using Deflate algorithm
-* Encoded back in plain ASCII using a transformation close to base64
-
 
 == Install
 
@@ -62,13 +57,16 @@ $encode = encodep('Alice -> Bob: hello');
 echo "http://www.plantuml.com/plantuml/uml/{$encode}";
 ----
 
-WARNING: Since v1.0.0, `encodep()` function expects to receive utf8.
+TIP: Only PHP 5.6+ allows importing functons, for versions < PHP 5.6 you have to
+use full functin's namespace.
+
+WARNING: Since v1.0.0, `encodep()` function expects to receive an UTF-8 string.
 
 More examples:
 
-* link:ressources/examples/example-1.php[]
-* link:ressources/examples/example-2.php[]
+* link:resources/examples/example-1.php[]
+* link:resources/examples/example-2.php[]
 
 == Credits
 
-These functions are a copy/paste from http://plantuml.com/code-php
+These functions are a copy/paste from link:http://plantuml.com/code-php[].
