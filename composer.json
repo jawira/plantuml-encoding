@@ -1,23 +1,22 @@
 {
   "name": "jawira/plantuml-encoding",
-  "description": "PlantUML encoding functions",
   "type": "library",
-  "license": "GPL-3.0-or-later",
-  "authors": [
-    {
-      "name": "Jawira Portugal",
-      "email": "dev@jawira.com"
-    }
-  ],
-  "require": {
-    "php": "^5.4 | ^7.0"
-  },
+  "description": "PlantUML encoding functions",
   "keywords": [
     "PlantUML",
     "functions",
     "encoding",
     "encodep"
   ],
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Jawira Portugal"
+    }
+  ],
+  "require": {
+    "php": "^5.4 || ^7.0"
+  },
   "autoload": {
     "files": [
       "src/plantuml_functions.php"
