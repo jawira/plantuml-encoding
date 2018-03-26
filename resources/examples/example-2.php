@@ -6,4 +6,4 @@ use function Jawira\PlantUml\encodep;
 
 $encode = encodep('Alice -> Bob: hello');
 
-echo "http://www.plantuml.com/plantuml/uml/{$encode}";
+echo "http://www.plantuml.com/plantuml/uml/{$encode}" . PHP_EOL;
