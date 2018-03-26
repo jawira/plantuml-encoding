@@ -6,10 +6,21 @@ All notable changes to this project will be documented in this file.
 Unreleased
 ----------
 
+v1.0.5 - 2018-03-26
+-------------------
+
+### Changed
+
+* Lowering PHP minimum version in composer.json
+
+### Fixed
+
+* Fixed double pipe range (||) for php version in composer.json
+
 v1.0.4 - 2018-03-26
 -------------------
 
-### Changes
+### Changed
 
 * Changes PHP requirement to include more versions.
 * An example script has been modified to show how to use full function's 
