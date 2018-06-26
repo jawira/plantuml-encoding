@@ -13,6 +13,7 @@ Usually only `encodep()` is used.
 image:https://poser.pugx.org/jawira/plantuml-encoding/v/stable[title="Latest Stable Version", link="https://packagist.org/packages/jawira/plantuml-encoding"]
 image:https://poser.pugx.org/jawira/plantuml-encoding/license[title="License", link="https://packagist.org/packages/jawira/plantuml-encoding"]
 image:https://poser.pugx.org/jawira/plantuml-encoding/composerlock[title="composer.lock", link="https://packagist.org/packages/jawira/plantuml-encoding"]
+image:https://img.shields.io/badge/pds-skeleton-blue.svg[title="pds/skeleton", link="https://github.com/php-pds/skeleton"]
 
 == Purpose
 

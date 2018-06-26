@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 Unreleased
 ----------
 
+### Added
+
+* pds/skeleton badge in readme file
+
 v1.0.5 - 2018-03-26
 -------------------
 
