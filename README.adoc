@@ -14,6 +14,7 @@ image:https://poser.pugx.org/jawira/plantuml-encoding/v/stable[title="Latest Sta
 image:https://poser.pugx.org/jawira/plantuml-encoding/license[title="License", link="https://packagist.org/packages/jawira/plantuml-encoding"]
 image:https://poser.pugx.org/jawira/plantuml-encoding/composerlock[title="composer.lock", link="https://packagist.org/packages/jawira/plantuml-encoding"]
 image:https://img.shields.io/badge/pds-skeleton-blue.svg[title="pds/skeleton", link="https://github.com/php-pds/skeleton"]
+image:https://badge.waffle.io/jawira/plantuml-encoding.svg?columns=all[title="Waffle.io - Columns and their card count", link="https://waffle.io/jawira/plantuml-encoding"]
 
 == Purpose
 

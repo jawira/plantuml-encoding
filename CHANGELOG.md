@@ -9,6 +9,7 @@ Unreleased
 ### Added
 
 * pds/skeleton badge in readme file
+* waffle.io badge in readme file
 
 v1.0.5 - 2018-03-26
 -------------------
