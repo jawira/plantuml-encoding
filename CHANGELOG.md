@@ -8,8 +8,11 @@ Unreleased
 
 ### Added
 
-* pds/skeleton badge in readme file
-* waffle.io badge in readme file
+* pds/skeleton badge in [README.adoc]().
+* #8 waffle.io badge in [README.adoc]().
+* PhpDoc comments for all PlantUml functions.
+* [.gitattributes]() file to skip.
+* Added _zlib extension_ constraint to [composer.json]().
 
 v1.0.5 - 2018-03-26
 -------------------
