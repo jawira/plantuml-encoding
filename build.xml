@@ -15,9 +15,9 @@
         </composer>
     </target>
 
-    <target name="phive:update">
+    <target name="phive:install">
         <exec executable="phive" passthru="true" checkreturn="true">
-            <arg value="update"/>
+            <arg value="install"/>
         </exec>
     </target>
 
@@ -32,10 +32,10 @@
         </composer>
     </target>
 
-    <target name="phpstan:analyse" depends="phive:update">
+    <target name="phpstan:analyse" depends="phive:install">
         <exec executable="bin/phpstan" checkreturn="true" passthru="true">
             <arg line="-lmax --no-interaction --no-progress"/>
-            <arg line="analyse"/>
+            <arg value="analyse"/>
             <arg path="src"/>
         </exec>
     </target>
