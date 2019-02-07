@@ -21,7 +21,6 @@
         </exec>
     </target>
 
-
     <target name="test" depends="composer:validate, phpstan:analyse"/>
 
     <target name="composer:validate" description="Validate composer.json">
@@ -34,9 +33,10 @@
 
     <target name="phpstan:analyse" depends="phive:install">
         <exec executable="bin/phpstan" checkreturn="true" passthru="true">
-            <arg line="-lmax --no-interaction --no-progress"/>
+            <arg line="--level=max --no-interaction --no-progress"/>
             <arg value="analyse"/>
             <arg path="src"/>
         </exec>
     </target>
+
 </project>
