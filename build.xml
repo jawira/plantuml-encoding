@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project name="plantuml-encoding" description="Encoding function for " default="setup">
+
+    <target name="setup"
+            description="Prepare project for development"
+            depends="composer:install-dev"/>
+
+    <target name="composer:install-dev" description="Install for dev">
+        <composer command="install">
+            <arg value="--no-suggest"/>
+            <arg value="--no-interaction"/>
+            <arg value="--profile"/>
+            <arg value="--prefer-dist"/>
+        </composer>
+    </target>
+
+    <target name="phive:install">
+        <exec executable="phive" passthru="true" checkreturn="true">
+            <arg value="install"/>
+        </exec>
+    </target>
+
+
+    <target name="test" depends="composer:validate, phpstan:analyse"/>
+
+    <target name="composer:validate" description="Validate composer.json">
+        <composer command="validate">
+            <arg value="--no-interaction"/>
+            <arg value="--profile"/>
+            <arg value="--strict"/>
+        </composer>
+    </target>
+
+    <target name="phpstan:analyse" depends="phive:install">
+        <exec executable="bin/phpstan" checkreturn="true" passthru="true">
+            <arg line="-lmax --no-interaction --no-progress"/>
+            <arg value="analyse"/>
+            <arg path="src"/>
+        </exec>
+    </target>
+</project>
