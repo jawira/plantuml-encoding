@@ -6,12 +6,14 @@ All notable changes to this project will be documented in this file.
 Unreleased
 ----------
 
+## [v1.0.6] - 2019-02-08
+
 ### Added
 
 * pds/skeleton badge in [README.adoc]().
 * [#8] waffle.io badge in [README.adoc]().
 * PhpDoc comments for all PlantUml functions.
-* [#7] [.gitattributes]() file to skip.
+* [#7] [.gitattributes]() file to omit unnecessary files when downloading zip.
 * Added _zlib extension_ constraint to [composer.json]().
 
 ## [v1.0.5] - 2018-03-26
@@ -122,3 +124,5 @@ Types of changes
 [v0.0.1]: https://github.com/jawira/plantuml-encodin/compare/v0.0.0...v0.0.1
 
 [#7]: https://github.com/jawira/plantuml-encodin/pull/7
+
+[v1.0.6]: https://github.com/jawira/plantuml-encodin/compare/v1.0.5...v1.0.6
