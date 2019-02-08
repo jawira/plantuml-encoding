@@ -1,0 +1,15 @@
+# https://madewithlove.be/gitattributes/
+
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/.idea              export-ignore
+/build.xml          export-ignore
+/CHANGELOG.md       export-ignore
+/docs               export-ignore
+/phive.xml          export-ignore
+/phpstan.neon       export-ignore
+/phpunit.xml        export-ignore
+/phpunit.xml.dist   export-ignore
+/README.adoc        export-ignore
+/resources/examples export-ignore
+/tests              export-ignore
