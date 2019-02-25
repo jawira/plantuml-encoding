@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<project name="plantuml-encoding" description="Encoding function for " default="setup">
+<project name="plantuml-encoding"
+         description="Encoding function for PlantUML"
+         default="setup"
+         phingVersion="3.0">
 
     <target name="setup"
             description="Prepare project for development"
-            depends="composer:install-dev"/>
+            depends="composer:install-dev, phive:install"/>
 
     <target name="composer:install-dev" description="Install for dev">
         <composer command="install">
