@@ -13,6 +13,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+## [v1.0.7] - 2019-09-16
+
 ### Changed
 
 * [#9] Updating documentation
@@ -115,3 +117,5 @@ namespace. This is required for versions < PHP 5.6.
 [#7]: https://github.com/jawira/plantuml-encodin/pull/7
 [v1.0.6]: https://github.com/jawira/plantuml-encodin/compare/v1.0.5...v1.0.6
 [#9]: https://github.com/jawira/plantuml-encodin/pull/9
+
+[v1.0.7]: https://github.com/jawira/plantuml-encodin/compare/v1.0.6...v1.0.7
