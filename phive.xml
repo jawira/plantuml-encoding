@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phive xmlns="https://phar.io/phive">
-  <phar name="phpstan" version="^0.10.7" installed="0.11.1" location="./bin/phpstan" copy="false"/>
+  <configuration>
+    <targetDirectory>bin</targetDirectory>
+  </configuration>
+  <phar name="phpstan" version="^0.10.7" installed="0.11.15" location="./bin/phpstan" copy="false"/>
+  <phar name="composer" version="^1.9.0" installed="1.9.0" location="./bin/composer" copy="false"/>
+  <phar name="phing" version="^3.0.0-alpha3" installed="3.0.0-alpha3" location="./bin/phing" copy="false"/>
 </phive>

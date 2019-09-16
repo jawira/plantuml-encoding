@@ -2,15 +2,21 @@
   <dictionary name="jawira">
     <words>
       <w>adoc</w>
+      <w>emojis</w>
       <w>encodep</w>
+      <w>enduml</w>
       <w>gitattributes</w>
       <w>gitignore</w>
       <w>jawira</w>
+      <w>phing</w>
       <w>phive</w>
       <w>phpstan</w>
       <w>plantuml</w>
       <w>puml</w>
+      <w>skinparam</w>
       <w>spdx</w>
+      <w>startuml</w>
+      <w>symplify</w>
     </words>
   </dictionary>
 </component>
