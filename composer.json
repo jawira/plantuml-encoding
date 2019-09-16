@@ -6,7 +6,8 @@
     "PlantUML",
     "functions",
     "encoding",
-    "encodep"
+    "encodep",
+    "uml"
   ],
   "license": "GPL-3.0-or-later",
   "authors": [
