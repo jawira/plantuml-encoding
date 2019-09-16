@@ -21,7 +21,7 @@ Usually only `encodep()` is used.
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/jawira/plantuml-encoding.svg)](http://isitmaintained.com/project/jawira/plantuml-encoding "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/jawira/plantuml-encoding.svg)](http://isitmaintained.com/project/jawira/plantuml-encoding "Percentage of issues still open")
 [![PDS Skeleton](https://img.shields.io/badge/pds-skeleton-blue.svg?style=flat-square)](https://github.com/php-pds/skeleton)
-[![Issues](https://huboard.com/jawira/plantuml-encoding/)](https://huboard.com/jawira/plantuml-encoding)
+[![Issues](https://img.shields.io/github/issues/jawira/plantuml-encoding.svg?label=HuBoard&color=694DC2)](https://huboard.com/jawira/plantuml-encoding)
 
 Purpose
 -------

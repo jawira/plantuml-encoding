@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-<!---
+<!--
     Added       for new features.
     Changed     for changes in existing functionality.
     Deprecated  for soon-to-be removed features.
