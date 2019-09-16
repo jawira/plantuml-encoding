@@ -2,3 +2,6 @@
 /vendor/
 /bin/phpstan
 /composer.lock
+/bin/composer
+/bin/phing
+/bin/phive
