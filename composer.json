@@ -1,7 +1,7 @@
 {
   "name": "jawira/plantuml-encoding",
   "type": "library",
-  "description": "PlantUML encoding functions",
+  "description": "PlantUML text encoding functions",
   "keywords": [
     "PlantUML",
     "functions",
@@ -9,14 +9,14 @@
     "encodep",
     "uml"
   ],
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "authors": [
     {
       "name": "Jawira Portugal"
     }
   ],
   "require": {
-    "php": "^5.3.2 || ^7.0",
+    "php": ">=5.3.2",
     "ext-zlib": "*"
   },
   "autoload": {
