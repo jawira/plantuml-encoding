@@ -7,42 +7,26 @@
 
   <target name="setup"
           description="Prepare project for development"
-          depends="phive:install, phing:visualizer, composer:install, php:version"/>
+          depends="visualizer, composer:install"/>
 
-  <target name="phive:download">
-    <httpget dir="bin" followRedirects="true" url="https://phar.io/releases/phive.phar" filename="phive"/>
-    <chmod file="bin/phive" mode="0755"/>
-  </target>
-
-  <target name="phive:install" depends="phive:download">
-    <exec executable="bin/phive" passthru="true" checkreturn="true">
-      <arg value="install"/>
-    </exec>
-  </target>
-
-  <target name="phing:visualizer">
+  <target name="visualizer">
     <visualizer/>
   </target>
 
   <target name="composer:install" description="Install for dev">
-    <composer composer="bin/composer" command="install">
+    <composer command="install">
       <arg value="--no-suggest"/>
       <arg value="--no-interaction"/>
       <arg value="--profile"/>
       <arg value="--prefer-dist"/>
+      <arg value="--quiet"/>
     </composer>
   </target>
 
   <target name="qa" depends="composer:validate, phpstan:analyse"/>
 
-  <target name="php:version" description="Get current PHP version">
-    <exec executable="php" passthru="true" checkreturn="true">
-      <arg value="--version"/>
-    </exec>
-  </target>
-
   <target name="composer:validate" description="Validate composer.json">
-    <composer composer="bin/composer" command="validate">
+    <composer command="validate">
       <arg value="--no-interaction"/>
       <arg value="--profile"/>
       <arg value="--strict"/>
@@ -50,23 +34,17 @@
   </target>
 
   <target name="phpstan:analyse">
-    <exec executable="bin/phpstan" checkreturn="true" passthru="true">
+    <exec executable="vendor/bin/phpstan" checkreturn="true" passthru="true">
       <arg line="--level=max --no-interaction --no-progress"/>
       <arg value="analyse"/>
       <arg path="src"/>
     </exec>
   </target>
 
-  <target name="changelog:links" description="Update links in changelog file">
-    <composer composer="bin/composer" command="require">
-      <arg value="symplify/changelog-linker"/>
-    </composer>
+  <target name="changelog:update" description="Update changelog file">
     <exec executable="vendor/bin/changelog-linker">
-      <arg value="link"/>
+      <arg value="dump-merges"/>
     </exec>
-    <composer composer="bin/composer" command="remove">
-      <arg value="symplify/changelog-linker"/>
-    </composer>
   </target>
 
   <target name="git:tag-listing" description="List all git tags">

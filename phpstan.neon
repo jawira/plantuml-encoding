@@ -1,3 +1,0 @@
-parameters:
-    autoload_files:
-        - %currentWorkingDirectory%/src/plantuml_functions.php
