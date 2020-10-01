@@ -13,3 +13,4 @@
 /README.md          export-ignore
 /resources          export-ignore
 /tests              export-ignore
+/changelog-linker.yaml export-ignore
