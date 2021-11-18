@@ -1,0 +1,23 @@
+name: Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  tests:
+    strategy:
+      matrix:
+        php: ['7.3','7.4','8.0','8.1']
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: xdebug
+      - uses: actions/checkout@v2
+      - name: Download phing
+        run: php tests/vanilla.php

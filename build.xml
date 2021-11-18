@@ -2,7 +2,7 @@
 <project name="plantuml-encoding" description="Encoding function for PlantUML" default="help" phingVersion="3">
 
   <target name="setup" description="Prepare project for development" depends="composer:install"/>
-  <target name="qa" depends="composer:validate,phpstan:analyse,psalm:run"/>
+  <target name="qa" depends="composer:validate,tests:run,phpstan:analyse,psalm:run"/>
 
   <target name="composer:install" description="Install for dev">
     <composer command="install">
@@ -33,6 +33,12 @@
   <target name="psalm:run" description="Check code with Psalm">
     <exec executable="vendor/bin/psalm" checkreturn="true" passthru="true">
       <arg line="--no-cache --long-progress"/>
+    </exec>
+  </target>
+
+  <target name="tests:run" description="Check code with Psalm">
+    <exec executable="php" checkreturn="true" passthru="true">
+      <arg line="tests/vanilla.php"/>
     </exec>
   </target>
 
