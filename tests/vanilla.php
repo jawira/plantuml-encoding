@@ -52,11 +52,11 @@ foreach ($provider as $index => $case) {
     $result = \Jawira\PlantUml\encodep($case[0]);
 
     if ($result !== $case[1]) {
-        echo "NOK #$index", PHP_EOL;
+        echo "#$index NOK", PHP_EOL;
         echo "Current  $result", PHP_EOL;
         echo "Expected $case[1]", PHP_EOL;
         exit(1);
     }
-    echo "OK #$index", PHP_EOL;
+    echo "#$index OK", PHP_EOL;
 }
 
