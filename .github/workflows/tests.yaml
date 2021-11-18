@@ -19,7 +19,5 @@ jobs:
           php-version: ${{ matrix.php }}
           tools: composer:v2
       - uses: actions/checkout@v2
-      - name: Composer install
-        run: composer install --no-interaction --ansi --no-suggest --profile --prefer-dist
-      - name: Run tests
+      - name: Vanilla tests
         run: php tests/vanilla.php
