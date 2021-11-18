@@ -17,7 +17,6 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          tools: composer:v2
       - uses: actions/checkout@v2
       - name: Vanilla tests
         run: php tests/vanilla.php
