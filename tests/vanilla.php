@@ -48,6 +48,7 @@ PLANTUML;
 $provider[4][] = 'SoWkIImgAStDuRBoICt9oLSepo_AIR7ciWh9o2nM0AAKrBJClDGKXVmyhkBKijIYn1m5BQqSe52nbfOrbqDgNWfGCm00';
 
 // Testing
+echo 'PHP ', phpversion(), PHP_EOL;
 foreach ($provider as $index => $case) {
     $result = \Jawira\PlantUml\encodep($case[0]);
 
