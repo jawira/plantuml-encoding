@@ -17,7 +17,9 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          coverage: xdebug
+          tools: composer:v2
       - uses: actions/checkout@v2
-      - name: Download phing
+      - name: Composer install
+        run: composer install --no-interaction --ansi --no-suggest --profile --prefer-dist
+      - name: Run tests
         run: php tests/vanilla.php

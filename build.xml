@@ -11,6 +11,7 @@
       <arg value="--profile"/>
       <arg value="--prefer-dist"/>
       <arg value="--quiet"/>
+      <arg value="--ansi"/>
     </composer>
   </target>
 
