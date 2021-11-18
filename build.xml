@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<project name="plantuml-encoding" description="Encoding function for PlantUML" default="help" phingVersion="3">
 
-<project name="plantuml-encoding"
-         description="Encoding function for PlantUML"
-         default="setup"
-         phingVersion="3.0">
-
-  <target name="setup"
-          description="Prepare project for development"
-          depends="visualizer, composer:install"/>
-
-  <target name="visualizer">
-    <visualizer/>
-  </target>
+  <target name="setup" description="Prepare project for development" depends="composer:install"/>
+  <target name="qa" depends="composer:validate,tests:run,phpstan:analyse,psalm:run"/>
 
   <target name="composer:install" description="Install for dev">
     <composer command="install">
@@ -20,10 +11,9 @@
       <arg value="--profile"/>
       <arg value="--prefer-dist"/>
       <arg value="--quiet"/>
+      <arg value="--ansi"/>
     </composer>
   </target>
-
-  <target name="qa" depends="composer:validate, phpstan:analyse"/>
 
   <target name="composer:validate" description="Validate composer.json">
     <composer command="validate">
@@ -41,18 +31,26 @@
     </exec>
   </target>
 
-  <target name="changelog:update" description="Update changelog file">
-    <exec executable="vendor/bin/changelog-linker">
-      <arg value="dump-merges"/>
+  <target name="psalm:run" description="Check code with Psalm">
+    <exec executable="vendor/bin/psalm" checkreturn="true" passthru="true">
+      <arg line="--no-cache --long-progress"/>
     </exec>
   </target>
 
-  <target name="git:tag-listing" description="List all git tags">
-    <!-- https://stackoverflow.com/a/34239190/4345061 -->
-    <exec executable="git" passthru="true">
-      <arg value="log"/>
-      <arg line="--graph --all --decorate --oneline --simplify-by-decoration"/>
+  <target name="tests:run" description="Check code with Psalm">
+    <exec executable="php" checkreturn="true" passthru="true">
+      <arg line="tests/vanilla.php"/>
     </exec>
+  </target>
+
+  <target name="help">
+    <uptodate property="uptodate.visualizer" srcfile="build.xml" targetfile="build.png"/>
+    <runtarget target="visualizer"/>
+    <open path="build.png"/>
+  </target>
+
+  <target name="visualizer" unless="uptodate.visualizer" description="Create buildfile map">
+    <visualizer/>
   </target>
 
 </project>

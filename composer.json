@@ -1,7 +1,7 @@
 {
   "name": "jawira/plantuml-encoding",
   "type": "library",
-  "description": "PlantUML text encoding functions",
+  "description": "PlantUML encoding functions",
   "keywords": [
     "PlantUML",
     "functions",
@@ -16,7 +16,7 @@
     }
   ],
   "require": {
-    "php": ">=5.3.2",
+    "php": ">=5.3",
     "ext-zlib": "*"
   },
   "autoload": {
@@ -25,7 +25,11 @@
     ]
   },
   "require-dev": {
-    "phpstan/phpstan": "^0.12.47",
-    "symplify/changelog-linker": "^8.3"
+    "phpstan/phpstan": "^1.0",
+    "vimeo/psalm": "^4.0"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true
   }
 }

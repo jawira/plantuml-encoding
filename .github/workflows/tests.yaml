@@ -1,0 +1,22 @@
+name: Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  tests:
+    strategy:
+      matrix:
+        php: ['5.3','5.4','5.5','5.6','7.0','7.1','7.2','7.3','7.4','8.0','8.1','8.2']
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+      - uses: actions/checkout@v2
+      - name: Vanilla tests
+        run: php tests/vanilla.php
