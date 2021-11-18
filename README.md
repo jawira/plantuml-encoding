@@ -1,7 +1,8 @@
 PlantUML text encoding functions
-================================ 
+================================
 
-**This library exposes [PlantUML text encoding functions](https://plantuml.com/de/pte):**
+**This library
+exposes [PlantUML text encoding functions](https://plantuml.com/de/pte):**
 
 - `encodep()`
 - `encode6bit()`
@@ -17,17 +18,8 @@ PlantUML text encoding functions
 [![.gitattributes](https://poser.pugx.org/jawira/plantuml-encoding/gitattributes)](//packagist.org/packages/jawira/plantuml-encoding)
 [![Issues](https://img.shields.io/github/issues/jawira/plantuml-encoding.svg?label=HuBoard&color=694DC2)](https://huboard.com/jawira/plantuml-encoding)
 
-Purpose
--------
 
-[PlantUML](https://plantuml.com/) uses a _special encoding_ to transform an uml text description like 
-this:
 
-```plantuml
-@startuml
-Bob -> Alice : hello
-@enduml
-```
 
 into this:
 
@@ -42,12 +34,13 @@ The advantage of the last encoding is that it is easier to use in URL:
 Usage
 -----
 
+[PlantUML](https://plantuml.com/) uses a _special encoding_ to transform an uml
+text description like this:
+
 You must import `encodep()` function before using it:
 
 ```php
 <?php
-require './vendor/autoload.php';
-
 use function Jawira\PlantUml\encodep;
 
 $encode = encodep('Alice -> Bob: hello');
@@ -56,13 +49,8 @@ echo "http://www.plantuml.com/plantuml/uml/{$encode}";
 
 ⚠️ Since v1.0.0, `encodep()` function expects to receive an UTF-8 string.
 
-💡 Only PHP >=5.6 allows importing functions, for PHP <=5.5 you have to use 
-full function's namespace.
-
-More examples:
-
-- [resources/examples/example-1.php](resources/examples/example-1.php)
-- [resources/examples/example-2.php](resources/examples/example-2.php)
+💡 Only PHP >=5.6 allows importing functions, for PHP <=5.5 you have to use full
+function's namespace.
 
 Install
 -------
@@ -74,7 +62,10 @@ $ composer require jawira/plantuml-encoding
 Contributing
 ------------
 
-If you liked this project, [⭐ star it on GitHub](https://github.com/jawira/plantuml-encoding).
+- If you liked this
+  project, ⭐ star it on GitHub. [![GitHub Repo stars](https://img.shields.io/github/stars/jawira/plantuml-encoding?style=social)](https://github.com/jawira/plantuml-encoding)
+- Or follow me on
+  Twitter. [![Twitter Follow](https://img.shields.io/twitter/follow/jawira?style=social)](https://twitter.com/jawira)
 
 Credits
 -------
@@ -95,13 +86,7 @@ Packages from jawira
 <dd>Provides PlantUML executable and plantuml.jar</dd>
 
 <dt>
-    <a href="https://packagist.org/packages/jawira/phing-open-task">jawira/phing-open-task
-    <img alt="Gitlab stars" src="https://badgen.net/gitlab/stars/jawira/phing-open-task?icon=gitlab"/></a>
-</dt>
-<dd>Phing task to open files, directories, and URLs with your favorite software.</dd>
-
-<dt>
-    <a href="https://packagist.org/packages/jawira/case-converter">jawira/case-converter 
+    <a href="https://packagist.org/packages/jawira/case-converter">jawira/case-converter
     <img alt="GitHub stars" src="https://badgen.net/github/stars/jawira/case-converter?icon=github"/></a>
 </dt>
 <dd>Convert strings between 13 naming conventions: Snake case, Camel case,
