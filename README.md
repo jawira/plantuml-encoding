@@ -1,5 +1,4 @@
-PlantUML text encoding functions
-================================
+# PlantUML text encoding functions
 
 **This library
 exposes [PlantUML text encoding functions](https://plantuml.com/de/pte):**
@@ -9,73 +8,54 @@ exposes [PlantUML text encoding functions](https://plantuml.com/de/pte):**
 - `append3bytes()`
 - `encode64()`
 
-ℹ️ Usually only **`encodep()`** is used.
+**ℹ️ Usually only `encodep()` is used.**
 
-[![Latest Stable Version](https://poser.pugx.org/jawira/plantuml-encoding/v)](//packagist.org/packages/jawira/plantuml-encoding)
-[![Total Downloads](https://poser.pugx.org/jawira/plantuml-encoding/downloads)](//packagist.org/packages/jawira/plantuml-encoding)
-[![License](https://poser.pugx.org/jawira/plantuml-encoding/license)](//packagist.org/packages/jawira/plantuml-encoding)
-[![composer.lock](https://poser.pugx.org/jawira/plantuml-encoding/composerlock)](//packagist.org/packages/jawira/plantuml-encoding)
-[![.gitattributes](https://poser.pugx.org/jawira/plantuml-encoding/gitattributes)](//packagist.org/packages/jawira/plantuml-encoding)
-[![Issues](https://img.shields.io/github/issues/jawira/plantuml-encoding.svg?label=HuBoard&color=694DC2)](https://huboard.com/jawira/plantuml-encoding)
+[![Packagist Version](https://img.shields.io/packagist/v/jawira/plantuml-encoding?style=for-the-badge)](//packagist.org/packages/jawira/plantuml-encoding)
+[![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/jawira/plantuml-encoding?style=for-the-badge)](//packagist.org/packages/jawira/plantuml-encoding)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/jawira/plantuml-encoding?style=for-the-badge)](//packagist.org/packages/jawira/plantuml-encoding)
+[![Packagist License](https://img.shields.io/packagist/l/jawira/plantuml-encoding?style=for-the-badge)](//packagist.org/packages/jawira/plantuml-encoding)
 
-
-
-
-into this:
-
-```
-SyfFKj2rKt3CoKnELR1Io4ZDoSa70000
-```
-
-The advantage of the last encoding is that it is easier to use in URL:
-
-<http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000>
-
-Usage
------
-
-[PlantUML](https://plantuml.com/) uses a _special encoding_ to transform an uml
-text description like this:
-
-You must import `encodep()` function before using it:
+## Usage
 
 ```php
 <?php
 use function Jawira\PlantUml\encodep;
 
-$encode = encodep('Alice -> Bob: hello');
-echo "http://www.plantuml.com/plantuml/uml/{$encode}";
+$diagram = <<<TXT
+@startuml
+Bob -> Alice : hello
+@enduml
+TXT;
+
+$encode = encodep($diagram); // SyfFKj2rKt3CoKnELR1Io4ZDoSa70000
+
+echo "https://www.plantuml.com/plantuml/uml/$encode";
 ```
+
+Output: <https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000>
 
 ⚠️ Since v1.0.0, `encodep()` function expects to receive an UTF-8 string.
 
-💡 Only PHP >=5.6 allows importing functions, for PHP <=5.5 you have to use full
-function's namespace.
-
-Install
--------
+## Install
 
 ```console
 $ composer require jawira/plantuml-encoding
 ```
 
-Contributing
-------------
+## Contributing
 
 - If you liked this
   project, ⭐ star it on GitHub. [![GitHub Repo stars](https://img.shields.io/github/stars/jawira/plantuml-encoding?style=social)](https://github.com/jawira/plantuml-encoding)
 - Or follow me on
   Twitter. [![Twitter Follow](https://img.shields.io/twitter/follow/jawira?style=social)](https://twitter.com/jawira)
 
-Credits
--------
+## Credits
 
 These functions are a copy/paste from <http://plantuml.com/code-php>.
 
 ***
 
-Packages from jawira
---------------------
+## Packages from jawira
 
 <dl>
 
