@@ -2,7 +2,7 @@
 <project name="plantuml-encoding" description="Encoding function for PlantUML" default="help" phingVersion="3">
 
   <target name="setup" description="Prepare project for development" depends="composer:install"/>
-  <target name="qa" depends="composer:validate,tests:run,phpstan:analyse,psalm:run"/>
+  <target name="qa" depends="composer:normalize,composer:validate,tests:run,phpstan:analyse,psalm:run"/>
 
   <target name="composer:install" description="Install for dev">
     <composer command="install">
@@ -12,9 +12,13 @@
 
   <target name="composer:validate" description="Validate composer.json">
     <composer command="validate">
-      <arg value="--no-interaction"/>
-      <arg value="--profile"/>
-      <arg value="--strict"/>
+      <arg line="--no-interaction --profile --strict"/>
+    </composer>
+  </target>
+
+  <target name="composer:normalize" description="Normalize composer.json">
+    <composer command="normalize">
+      <arg line="--no-interaction"/>
     </composer>
   </target>
 
