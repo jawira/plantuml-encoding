@@ -1,16 +1,16 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Jawira\PlantUml;
 
 /**
- * Encodes a UML text description
+ * Encodes a UML text description into a special encoding.
  *
- * @param string $pumlCode PlantUml diagram, encoded in UTF8
+ * @param string $pumlCode PlantUml diagram, expected to be UTF-8.
  *
  * @return string Encoded string
- * @throws \Exception
+ * @throws \Exception Error with gzdeflate()
  */
-function encodep($pumlCode)
+function encodep(string $pumlCode): string
 {
     $compressed = gzdeflate($pumlCode, 9);
 
@@ -26,10 +26,10 @@ function encodep($pumlCode)
  *
  * @return string Encoded string
  */
-function encode64($compressed)
+function encode64(string $compressed): string
 {
     $encoded = '';
-    $length = strlen($compressed);
+    $length = mb_strlen($compressed, '8bit');
     for ($i = 0; $i < $length; $i += 3) {
         switch ($length) {
             case $i + 1:
@@ -54,7 +54,7 @@ function encode64($compressed)
  *
  * @return string
  */
-function append3bytes($b1, $b2, $b3)
+function append3bytes(int $b1, int $b2, int $b3): string
 {
     $c1 = $b1 >> 2;
     $c2 = (($b1 & 0x3) << 4) | ($b2 >> 4);
@@ -73,7 +73,7 @@ function append3bytes($b1, $b2, $b3)
  *
  * @return string
  */
-function encode6bit($b)
+function encode6bit(int $b): string
 {
     if ($b < 10) {
         return chr(48 + $b);
