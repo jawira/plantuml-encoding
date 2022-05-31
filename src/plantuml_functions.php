@@ -5,17 +5,17 @@ namespace Jawira\PlantUml;
 /**
  * Encodes a UML text description into a special encoding.
  *
- * @param string $pumlCode PlantUml diagram, expected to be UTF-8.
+ * @param string $puml PlantUml diagram code, expected to be UTF-8.
  *
  * @return string Encoded string
- * @throws \Exception Error with gzdeflate()
+ * @throws \RuntimeException Error with gzdeflate()
  */
-function encodep(string $pumlCode): string
+function encodep(string $puml): string
 {
-    $compressed = gzdeflate($pumlCode, 9);
+    $compressed = gzdeflate($puml, 9);
 
     if (false === $compressed) {
-        throw new \Exception('Error while compressing PlantUml diagram');
+        throw new \RuntimeException('Error while compressing PlantUml diagram.');
     }
 
     return encode64($compressed);
