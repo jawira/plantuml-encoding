@@ -1,7 +1,8 @@
 {
   "name": "jawira/plantuml-encoding",
-  "type": "library",
   "description": "PlantUML encoding functions",
+  "license": "MIT",
+  "type": "library",
   "keywords": [
     "PlantUML",
     "functions",
@@ -9,7 +10,6 @@
     "encodep",
     "uml"
   ],
-  "license": "MIT",
   "authors": [
     {
       "name": "Jawira Portugal",
@@ -20,17 +20,20 @@
     "php": ">=7.0",
     "ext-zlib": "*"
   },
+  "require-dev": {
+    "ergebnis/composer-normalize": "^2.27",
+    "phpstan/phpstan": "^1.0",
+    "vimeo/psalm": "^4.0"
+  },
   "autoload": {
     "files": [
       "src/plantuml_functions.php"
     ]
   },
-  "require-dev": {
-    "jawira/skeleton": "^2.14",
-    "phpstan/phpstan": "^1.0",
-    "vimeo/psalm": "^4.0"
-  },
   "config": {
+    "allow-plugins": {
+      "ergebnis/composer-normalize": true
+    },
     "preferred-install": "dist",
     "sort-packages": true
   }
