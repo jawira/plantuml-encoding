@@ -12,11 +12,12 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Jawira Portugal"
+      "name": "Jawira Portugal",
+      "homepage": "https://jawira.com"
     }
   ],
   "require": {
-    "php": ">=5.3",
+    "php": ">=7.0",
     "ext-zlib": "*"
   },
   "autoload": {
@@ -25,6 +26,7 @@
     ]
   },
   "require-dev": {
+    "jawira/skeleton": "^2.14",
     "phpstan/phpstan": "^1.0",
     "vimeo/psalm": "^4.0"
   },

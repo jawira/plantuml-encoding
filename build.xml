@@ -6,12 +6,7 @@
 
   <target name="composer:install" description="Install for dev">
     <composer command="install">
-      <arg value="--no-suggest"/>
-      <arg value="--no-interaction"/>
-      <arg value="--profile"/>
-      <arg value="--prefer-dist"/>
-      <arg value="--quiet"/>
-      <arg value="--ansi"/>
+      <arg line="--no-suggest --no-interaction --profile --prefer-dist --quiet --ansi"/>
     </composer>
   </target>
 
@@ -25,7 +20,7 @@
 
   <target name="phpstan:analyse">
     <exec executable="vendor/bin/phpstan" checkreturn="true" passthru="true">
-      <arg line="--level=max --no-interaction --no-progress"/>
+      <arg line="--level=max --no-interaction --no-progress --ansi"/>
       <arg value="analyse"/>
       <arg path="src"/>
     </exec>
@@ -44,13 +39,13 @@
   </target>
 
   <target name="help">
-    <uptodate property="uptodate.visualizer" srcfile="build.xml" targetfile="build.png"/>
-    <runtarget target="visualizer"/>
-    <open path="build.png"/>
+    <uptodate property="uptodate.visualizer" srcfile="build.xml" targetfile="build.svg"/>
+    <runtarget target="map"/>
+    <open path="build.svg"/>
   </target>
 
-  <target name="visualizer" unless="uptodate.visualizer" description="Create buildfile map">
-    <visualizer/>
+  <target name="map" unless="uptodate.visualizer" description="Create buildfile map">
+    <visualizer format="svg"/>
   </target>
 
 </project>

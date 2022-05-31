@@ -5,6 +5,7 @@
 /.github            export-ignore
 /build.xml          export-ignore
 /build.png          export-ignore
+/build.svg          export-ignore
 /CHANGELOG.md       export-ignore
 /docs               export-ignore
 /phive.xml          export-ignore
@@ -15,3 +16,12 @@
 /resources          export-ignore
 /tests              export-ignore
 /psalm.xml          export-ignore
+
+*.php	text	eol=lf	diff=php
+*.js	text	eol=lf
+*.svg	text	eol=lf
+*.bat	text	eol=crlf
+*.phar	binary
+*.png	binary
+*.jpg	binary
+

@@ -1,54 +1,75 @@
 <?php
 require_once __DIR__ . '/../src/plantuml_functions.php';
 
-$provider = array();
-
 // Case 1
-$provider[0] = array();
-$provider[0][] = <<<PLANTUML
+$case1 = array();
+$case1[] = <<<PLANTUML
 Bob -> Alice : hello
 PLANTUML;
-$provider[0][] = 'SyfFKj2rKt3CoKnELR1Io4ZDoSa70000';
+$case1[] = 'SyfFKj2rKt3CoKnELR1Io4ZDoSa70000';
 
 // Case 2
-$provider[1] = array();
-$provider[1][] = <<<PLANTUML
+$case2 = array();
+$case2[] = <<<PLANTUML
 @startuml
 Bob -> Alice : hello
 @enduml
 PLANTUML;
-$provider[1][] = 'SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80';
-
+$case2[] = 'SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80';
 
 // Case 3
-$provider[2] = array();
-$provider[2][] = <<<PLANTUML
+$case3 = array();
+$case3[] = <<<PLANTUML
 (ûüù)->(ñçà)
 PLANTUML;
-$provider[2][] = 'qpYy-_2UmpirTUqq3cyylFpm0aq0';
+$case3[] = 'qpYy-_2UmpirTUqq3cyylFpm0aq0';
 
 // Case 4
-$provider[3] = array();
-$provider[3][] = <<<PLANTUML
+$case4 = array();
+$case4[] = <<<PLANTUML
 @startuml
 Eğitim - Eğitim : Eğitim >
 @enduml
 PLANTUML;
-$provider[3][] = 'SoWkIImgAStDuN8zCZ-p93DNGLS1nhA2i-ou75BpKe2g0000';
+$case4[] = 'SoWkIImgAStDuN8zCZ-p93DNGLS1nhA2i-ou75BpKe2g0000';
 
 // Case 5
-$provider[4] = array();
-$provider[4][] = <<<PLANTUML
+$case5 = array();
+$case5[] = <<<PLANTUML
 @startuml
 :Hello world;
 :This is defined on
 several **lines**;
 @enduml
 PLANTUML;
-$provider[4][] = 'SoWkIImgAStDuRBoICt9oLSepo_AIR7ciWh9o2nM0AAKrBJClDGKXVmyhkBKijIYn1m5BQqSe52nbfOrbqDgNWfGCm00';
+$case5[] = 'SoWkIImgAStDuRBoICt9oLSepo_AIR7ciWh9o2nM0AAKrBJClDGKXVmyhkBKijIYn1m5BQqSe52nbfOrbqDgNWfGCm00';
+
+// Case 6
+$case6 = array();
+$case6[] = '';
+$case6[] = '0m00';
+
+// Case 7
+$case7 = array();
+$case7[] = <<<PLANTUML
+@startuml
+@enduml
+PLANTUML;
+$case7[] = 'SoWkIImgAStDuN98pKi1qW00';
+
+// Case 8
+$case8 = array();
+$case8[] = <<<PLANTUML
+@startuml
+!theme mars
+Bob -> Alice : hello
+@enduml
+PLANTUML;
+$case8[] = 'SoWkIImgAStDuL8ioKZDJLN8JImgvdBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1AWG0';
 
 // Testing
 echo 'PHP ', phpversion(), PHP_EOL;
+$provider = compact('case1', 'case2', 'case3', 'case4', 'case5', 'case6', 'case7', 'case8');
 foreach ($provider as $index => $case) {
     $result = \Jawira\PlantUml\encodep($case[0]);
 
