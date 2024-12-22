@@ -17,13 +17,11 @@
     }
   ],
   "require": {
-    "php": ">=7.0",
+    "php": ">=7.4",
     "ext-zlib": "*"
   },
   "require-dev": {
-    "ergebnis/composer-normalize": "^2.27",
-    "phpstan/phpstan": "^1.0",
-    "vimeo/psalm": "^4.0"
+    "phpstan/phpstan": "^2"
   },
   "autoload": {
     "files": [
@@ -31,9 +29,6 @@
     ]
   },
   "config": {
-    "allow-plugins": {
-      "ergebnis/composer-normalize": true
-    },
     "preferred-install": "dist",
     "sort-packages": true
   }

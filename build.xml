@@ -2,7 +2,7 @@
 <project name="plantuml-encoding" description="Encoding function for PlantUML" default="help" phingVersion="3">
 
   <target name="setup" description="Prepare project for development" depends="composer:install"/>
-  <target name="qa" depends="composer:normalize,composer:validate,tests:run,phpstan:analyse,psalm:run"/>
+  <target name="qa" depends="composer:validate,tests:run,phpstan:analyse"/>
 
   <target name="composer:install" description="Install for dev">
     <composer command="install">
@@ -16,13 +16,7 @@
     </composer>
   </target>
 
-  <target name="composer:normalize" description="Normalize composer.json">
-    <composer command="normalize">
-      <arg line="--no-interaction"/>
-    </composer>
-  </target>
-
-  <target name="phpstan:analyse">
+  <target name="phpstan:analyse" description="Static analysis with PHPStan">
     <exec executable="vendor/bin/phpstan" checkreturn="true" passthru="true">
       <arg line="--level=max --no-interaction --no-progress --ansi"/>
       <arg value="analyse"/>
@@ -30,13 +24,7 @@
     </exec>
   </target>
 
-  <target name="psalm:run" description="Check code with Psalm">
-    <exec executable="vendor/bin/psalm" checkreturn="true" passthru="true">
-      <arg line="--no-cache --long-progress"/>
-    </exec>
-  </target>
-
-  <target name="tests:run" description="Check code with Psalm">
+  <target name="tests:run" description="Run tests">
     <exec executable="php" checkreturn="true" passthru="true">
       <arg line="tests/vanilla.php"/>
     </exec>
